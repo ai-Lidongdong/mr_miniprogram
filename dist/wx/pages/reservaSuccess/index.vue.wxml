@@ -1,0 +1,9 @@
+<template name="c40f9c06">
+  <view class="_div data-v-22bf33ef success">
+    <view class="_div data-v-22bf33ef success-img">
+      <image src="/static/images/hourglass.png" class="_img data-v-22bf33ef"></image>
+    </view>
+    <view class="_p data-v-22bf33ef success-text">恭喜您付款成功！</view>
+    <view class="_p data-v-22bf33ef success-explain">我们会在24小时内与您电话预约复尺时间等事宜～</view>
+  </view>
+</template>

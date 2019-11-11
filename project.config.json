@@ -1,0 +1,184 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"enhance": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"nodeModules": true,
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"uglifyFileName": true
+	},
+	"miniprogramRoot": "dist/wx/",
+	"compileType": "miniprogram",
+	"appid": "wx07435ff39c99631c",
+	"projectname": "curtain",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 15,
+			"list": [
+				{
+					"id": -1,
+					"name": "tabtest",
+					"pathName": "pages/tabtest/main",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "tabtest2",
+					"pathName": "pages/tabtest2/main",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "houseType",
+					"pathName": "pages/houseType/main",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "order",
+					"pathName": "pages/order/main",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "option",
+					"pathName": "pages/optionType/main",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "fabricType",
+					"pathName": "pages/optionType/main",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "fabricType",
+					"pathName": "pages/fabricType/main",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "reservation",
+					"pathName": "pages/reservation/main",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "reservaSuccess",
+					"pathName": "pages/reservaSuccess/main",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "reservaSuccess",
+					"pathName": "pages/reservaSuccess/main",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "user",
+					"pathName": "pages/user/main",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "storeDetails",
+					"pathName": "pages/storeDetails/main",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "orderDetails",
+					"pathName": "pages/orderDetails/main",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "user",
+					"pathName": "pages/user/main",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "pages/index/main",
+					"pathName": "pages/index/main",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 15,
+					"name": "pages/optionType/main",
+					"pathName": "pages/optionType/main",
+					"query": "room_num=3&bathroom_num=undefined&cloth_num=7.71&house_id=5&property_id=9&property_name=万科·魅力之城&room_type=1,27,32",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/fabricType/main",
+					"pathName": "pages/fabricType/main",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/main",
+					"pathName": "pages/index/main",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/reservation/main",
+					"pathName": "pages/reservation/main",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/authorize/main",
+					"pathName": "pages/authorize/main",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,51 @@
+<template name="098f71d4">
+  <view class="_div data-v-1dd3ece4 search-body">
+    <view wx:if="{{selectArea}}" class="_div data-v-1dd3ece4">
+      <view class="_div data-v-1dd3ece4 search">
+        <image src="/static/images/seach.png" class="_img data-v-1dd3ece4 search-img"></image> <input class="_input data-v-1dd3ece4 search-input" type="text" placeholder="请搜索关键字" value="{{keyWord}}" bindinput="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" />
+      </view>
+      <view class="_div data-v-1dd3ece4 recommend-wrapper">
+        <view class="_div data-v-1dd3ece4 recommend" wx:key="index" key="{{index}}" hidden="{{!(seachNoData)}}" wx:for="{{address}}" wx:for-index="index" wx:for-item="goods">
+          <view class="_p data-v-1dd3ece4"><label class="_span data-v-1dd3ece4 iconfont">{{goods.name}}</label></view>
+          <view class="_ul data-v-1dd3ece4 clear_float">
+            <view wx:key="index2" key="{{index2}}" class="_li data-v-1dd3ece4 recommend-item {{[moneyId == item.id ? 'active' : '']}}" bindtap="handleProxy" data-eventid="{{'1_'+index+'-'+index2}}" data-comkey="{{$k}}" wx:for="{{goods.property}}" wx:for-index="index2" wx:for-item="item">{{item.property_name}}</view>
+          </view>
+        </view>
+      </view>
+      <view class="_div data-v-1dd3ece4 search-content" ref="search" hidden="{{!(keyWord)}}">
+        <view class="_ul data-v-1dd3ece4 goods clear_float">
+          <view class="_li data-v-1dd3ece4 search-item border-bottom {{[moneyId == item.id ? 'active' : '']}}" wx:key="item.id" key="{{item.id}}" bindtap="handleProxy" data-eventid="{{'2_'+index}}" data-comkey="{{$k}}" wx:for="{{list}}" wx:for-index="index" wx:for-item="item">{{item.property_name}}</view>
+          <view class="_li data-v-1dd3ece4 search-item border-bottom">没有找到匹配数据</view>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{category}}" class="_div data-v-1dd3ece4">
+      <view class="_div data-v-1dd3ece4 search">
+        <image src="/static/images/seach.png" class="_img data-v-1dd3ece4 search-img"></image> <input class="_input data-v-1dd3ece4 search-input" type="text" placeholder="请搜索关键字" />
+      </view>
+      <view class="_div data-v-1dd3ece4 recommend-wrapper">
+        <view class="_div data-v-1dd3ece4 recommend">
+          <view class="_p data-v-1dd3ece4"><label class="_span data-v-1dd3ece4 iconfont">选择品类</label></view>
+          <view class="_ul data-v-1dd3ece4 clear_float">
+            <view class="_li data-v-1dd3ece4 recommend-item recommend_active" bindtap="handleProxy" data-eventid="{{'3'}}" data-comkey="{{$k}}">窗帘</view>
+            <view class="_li data-v-1dd3ece4 recommend-item">暂无开放</view>
+          </view>
+        </view>
+      </view>
+      <view class="_div data-v-1dd3ece4 search-content" hidden="{{!(categoryNoData)}}">
+        <view class="_ul data-v-1dd3ece4 goods clear_float">
+          <view class="_li data-v-1dd3ece4 search-item border-bottom"></view>
+          <view class="_li data-v-1dd3ece4 search-item border-bottom">没有找到匹配数据</view>
+        </view>
+      </view>
+    </view>
+    <view class="_div data-v-1dd3ece4 service">
+      <view class="_div data-v-1dd3ece4 service-left"><button open-type="contact" class="_button data-v-1dd3ece4 online">
+          <image src="/static/images/kefu_no.png" class="_img data-v-1dd3ece4 service-img"></image> <label style="margin:0 5px" class="_span data-v-1dd3ece4">在线客服</label>
+        </button></view>
+      <view class="_div data-v-1dd3ece4 service-right" bindtap="handleProxy" data-eventid="{{'4'}}" data-comkey="{{$k}}">
+        <image src="/static/images/pohao_no.png" class="_img data-v-1dd3ece4 service-img"></image> <label style="margin:0 5px" class="_span data-v-1dd3ece4">拨打电话</label>
+      </view>
+    </view>
+  </view>
+</template>

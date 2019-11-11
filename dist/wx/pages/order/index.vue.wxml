@@ -1,0 +1,25 @@
+<template name="2077ba92">
+  <view style="margin-bottom:100px" class="_div data-v-43136060">
+    <view class="_div data-v-43136060 order-wrapper" bindtap="handleProxy" wx:key="item.id" key="{{item.id}}" data-eventid="{{'0_'+index}}" data-comkey="{{$k}}" wx:for="{{ordera}}" wx:for-index="index" wx:for-item="item">
+      <view class="_div data-v-43136060 order-left">
+        <view class="_div data-v-43136060 order-address"><label class="_span data-v-43136060 order-name">{{item.property_name}}</label> <label class="_span data-v-43136060 line"></label> <label class="_span data-v-43136060 order-store">{{item.build_num}}栋-{{item.unit_num}}单元-{{item.room_num}}号</label></view>
+        <view class="_div data-v-43136060 time">{{item.created}}</view>
+      </view>
+      <view class="_div data-v-43136060 order-left">
+        <view class="_p data-v-43136060 money">¥{{item.price}}</view>
+        <view class="_p data-v-43136060 success" wx:if="{{item.status==9}}">已取消</view>
+        <view class="_p data-v-43136060 success" wx:if="{{item.status==0}}">未付款</view>
+        <view class="_p data-v-43136060 success" wx:if="{{item.status==1}}">已付款</view> <label class="_span data-v-43136060 iconfont"></label>
+      </view>
+    </view>
+    <view class="_div data-v-43136060 nodata" wx:if="{{ordera.length == 0}}" style="padding-top: 160rpx; text-align: center;color: #999999;font-size: 14px;">{{nodata}}</view>
+    <view class="_div data-v-43136060 service">
+      <view class="_div data-v-43136060 service-left"><button open-type="contact" class="_button data-v-43136060 online">
+          <image src="/static/images/kefu_no.png" class="_img data-v-43136060 service-img"></image> <label style="margin:0 5px" class="_span data-v-43136060">在线客服</label>
+        </button></view>
+      <view class="_div data-v-43136060 service-right" bindtap="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}">
+        <image src="/static/images/pohao_no.png" class="_img data-v-43136060 service-img"></image> <label style="margin:0 5px" class="_span data-v-43136060">拨打电话</label>
+      </view>
+    </view>
+  </view>
+</template>

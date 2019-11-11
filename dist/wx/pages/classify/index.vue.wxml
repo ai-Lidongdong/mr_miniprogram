@@ -1,0 +1,58 @@
+<template name="6c6f8a56">
+  <view class="_div data-v-69592c70 house">
+    <view class="_div data-v-69592c70 house-wrapper">
+      <view class="_div data-v-69592c70 content">
+        <view class="_div data-v-69592c70 horizontal-cell">金茂湾</view>
+        <view class="_div data-v-69592c70 horizontal-cell separator">2, 3栋</view>
+      </view>
+      <view class="_div data-v-69592c70 house-text"> 户型选择原则：例：1栋1601户型对应01户型 </view>
+      <view class="_div data-v-69592c70">
+        <view class="_ul data-v-69592c70 clear_float">
+          <view class="_li data-v-69592c70 house-item">
+            <view class="_div data-v-69592c70 mould">01户型</view>
+            <view class="_div data-v-69592c70 number">101-4601</view>
+          </view>
+          <view class="_li data-v-69592c70 house-item">
+            <view class="_div data-v-69592c70 mould">01户型</view>
+            <view class="_div data-v-69592c70 number">101-4601</view>
+          </view>
+          <view class="_li data-v-69592c70 house-item">
+            <view class="_div data-v-69592c70 mould">01户型</view>
+            <view class="_div data-v-69592c70 number">101-4601</view>
+          </view>
+          <view class="_li data-v-69592c70 house-item">
+            <view class="_div data-v-69592c70 mould">01户型</view>
+            <view class="_div data-v-69592c70 number">101-4601</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="_div data-v-69592c70 house-wrapper">
+      <view class="_div data-v-69592c70 content">
+        <view class="_div data-v-69592c70 horizontal-cell">金茂湾</view>
+        <view class="_div data-v-69592c70 horizontal-cell separator">2, 3栋</view>
+      </view>
+      <view class="_div data-v-69592c70 house-text"> 户型选择原则：例：1栋1601户型对应01户型 </view>
+      <view class="_div data-v-69592c70">
+        <view class="_ul data-v-69592c70 clear_float">
+          <view class="_li data-v-69592c70 house-item">
+            <view class="_div data-v-69592c70 mould">01户型</view>
+            <view class="_div data-v-69592c70 number">101-4601</view>
+          </view>
+          <view class="_li data-v-69592c70 house-item">
+            <view class="_div data-v-69592c70 mould">01户型</view>
+            <view class="_div data-v-69592c70 number">101-4601</view>
+          </view>
+          <view class="_li data-v-69592c70 house-item">
+            <view class="_div data-v-69592c70 mould">01户型</view>
+            <view class="_div data-v-69592c70 number">101-4601</view>
+          </view>
+          <view class="_li data-v-69592c70 house-item">
+            <view class="_div data-v-69592c70 mould">01户型</view>
+            <view class="_div data-v-69592c70 number">101-4601</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

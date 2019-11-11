@@ -1,0 +1,27 @@
+<template name="5586fe7d">
+  <view class="_div data-v-972a4422 tab-warp">
+    <scroll-view class="_scroll-view data-v-972a4422 menu-wrapper" scroll-into-view="{{navId}}" scroll-with-animation="true" scroll-y>
+      <view class="_ul data-v-972a4422 menu-ul">
+        <view class="_li data-v-972a4422 menu-item {{index === currentIndex ? 'current' : ''}}" id="{{'nav_'+index}}" wx:key="index" key="{{index}}" bindtap="handleProxy" data-eventid="{{'0_'+index}}" data-comkey="{{$k}}" wx:for="{{goods}}" wx:for-index="index" wx:for-item="item">{{item.name}}</view>
+      </view>
+    </scroll-view>
+    <scroll-view class="_scroll-view data-v-972a4422 top-wrapper" scroll-x bindscroll="handleProxy" scroll-into-view="{{topId}}" scroll-with-animation="true" data-eventid="{{'2'}}" data-comkey="{{$k}}">
+      <view class="_ul data-v-972a4422 top-ul">
+        <view class="_li data-v-972a4422 top-ul-li {{l === currentIndex2 ? 'current2' : ''}}" id="{{'top_'+l}}" wx:key="l" key="{{l}}" bindtap="handleProxy" data-eventid="{{'1_'+l}}" data-comkey="{{$k}}" wx:for="{{menu2}}" wx:for-index="l" wx:for-item="item">
+          {{item.name}}
+        </view>
+      </view>
+    </scroll-view>
+    <scroll-view class="_scroll-view data-v-972a4422 foods-wrapper" scroll-y bindscroll="handleProxy" scroll-into-view="{{contentId}}" scroll-with-animation="true" data-eventid="{{'3'}}" data-comkey="{{$k}}">
+      <view class="_ul data-v-972a4422">
+        <view id="{{'con_'+i}}" class="_li data-v-972a4422 food-list food-list-hook" wx:key="i" key="{{i}}" wx:for="{{goods}}" wx:for-index="i" wx:for-item="item">
+          <view id="{{'con_'+i+j}}" wx:key="j" key="{{j}}" class="_div data-v-972a4422 last-list" wx:for="{{item.tops}}" wx:for-index="j" wx:for-item="top">
+            <view class="_div data-v-972a4422 list-item" wx:key="k" key="{{k}}" wx:for="{{top.datas}}" wx:for-index="k" wx:for-item="data">
+              {{data}}
+            </view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</template>

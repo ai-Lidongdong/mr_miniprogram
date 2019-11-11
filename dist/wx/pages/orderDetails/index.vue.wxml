@@ -1,0 +1,139 @@
+<template name="1ce15134">
+  <view class="_div data-v-73b22dd8">
+    <view style="background: #f5f5f5;" class="_div data-v-73b22dd8 {{[isIPhoneX ? 'optionArea' : '']}}">
+      <view class="_div data-v-73b22dd8 house">
+        <view style="background: #fff;" class="_div data-v-73b22dd8">
+          <view class="_div data-v-73b22dd8 house-wrapper">
+            <view class="_div data-v-73b22dd8 content">
+              <view class="_div data-v-73b22dd8 horizontal-cell">{{userInfo.property_name}}</view>
+              <view class="_div data-v-73b22dd8 horizontal-cell separator">{{userInfo.build_num}}栋-{{userInfo.unit_num}}单元-{{userInfo.room_num}}号</view>
+              <view class="_div data-v-73b22dd8 horizontal-status" wx:if="{{orderInfo.status==9}}">已取消</view>
+              <view class="_div data-v-73b22dd8 horizontal-status" wx:if="{{orderInfo.status==0}}">未付款</view>
+              <view class="_div data-v-73b22dd8 horizontal-status" wx:if="{{orderInfo.status==1}}">已付款</view>
+            </view>
+          </view>
+          <view class="_div data-v-73b22dd8 program-bg">
+            <view class="_div data-v-73b22dd8 program-main">
+              <view class="_div data-v-73b22dd8 program">
+                <view class="_p data-v-73b22dd8 program-title"><label class="_span data-v-73b22dd8">所需窗帘窗宽{{orderInfo.house_type.cloth_num}}米同时所需配件{{orderInfo.house_type.cloth_num}}米</label></view>
+              </view>
+              <view wx:key="index_program" key="{{index_program}}" wx:if="{{program}}" wx:for="{{orderInfo.program}}" wx:for-index="index_program" wx:for-item="program" class="_div data-v-73b22dd8">
+                <view class="_ul data-v-73b22dd8 tab-tilte clear_float">
+                  <view class="_li data-v-73b22dd8">
+                    {{program.room_types.name}}： <label style="color:#000;" class="_span data-v-73b22dd8"> {{program.width_meter}}M</label></view>
+                </view>
+                <view class="_div data-v-73b22dd8 tab-content clear_float">
+                  <view class="_div data-v-73b22dd8 tab-wrapper">
+                    <view class="_div data-v-73b22dd8 tab-img">
+                      <image src="{{program.cover}}" class="_img data-v-73b22dd8"></image>
+                    </view>
+                    <view class="_div data-v-73b22dd8 tab-multiple"><label style="margin: 5px 5px 0px 5px;display: block;" class="_span data-v-73b22dd8">颜色选择：</label>
+                      <view class="_ul data-v-73b22dd8 tab-serise-ul clear_float">
+                        <view class="_li data-v-73b22dd8 tab-series-li" style="padding: 7px 15px;"><label class="_span data-v-73b22dd8">冷灰色</label></view>
+                        <view class="_li data-v-73b22dd8 tab-series-li" style="padding: 7px 15px;"><label class="_span data-v-73b22dd8">冷灰色</label></view>
+                      </view>
+                    </view>
+                    <view class="_div data-v-73b22dd8 tab-multiple"><label style="margin: 5px 5px 0px 5px;display: block;" class="_span data-v-73b22dd8">材质选择：</label>
+                      <view class="_ul data-v-73b22dd8 tab-serise-ul clear_float">
+                        <view class="_li data-v-73b22dd8 tab-series-li"><label class="_span data-v-73b22dd8">
+                            <image src="/static/images/chuang.jpg" style="width:10px;height:10px;vertical-align: middle;" class="_img data-v-73b22dd8"></image>
+                          </label> <label style="margin:0 5px" class="_span data-v-73b22dd8">高机密</label></view>
+                      </view>
+                    </view>
+                    <view class="_div data-v-73b22dd8 tab-text">
+                      <view class="_p data-v-73b22dd8 tab-text-tilte" wx:if="{{moneyArrIdx[index]}}">全国统一价：3.12*320=998.4元</view>
+                      <view class="_p data-v-73b22dd8 tab-text-tilte" wx:else>全国统一价：3.12*320=998.4元</view>
+                      <view class="_p data-v-73b22dd8 tab-text-caption">备注：为保证窗帘的美观，默认为两倍褶</view> <label class="_span data-v-73b22dd8 tab-text-details" bindtap="handleProxy" data-eventid="{{'0_'+index_program}}" data-comkey="{{$k}}">社区优惠价：187.2元</label>
+                    </view>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="_div data-v-73b22dd8 program-bg">
+          <view class="_div data-v-73b22dd8 program-main">
+            <view class="_div data-v-73b22dd8 program">
+              <view class="_p data-v-73b22dd8 program-title">面料选择：</view>
+            </view>
+            <view wx:key="index_choose" key="{{index_choose}}" wx:for="{{orderInfo.choose}}" wx:for-index="index_choose" wx:for-item="choose" class="_div data-v-73b22dd8">
+              <view class="_ul data-v-73b22dd8 tab-tilte clear_float">
+                <view class="_li data-v-73b22dd8">
+                  {{choose.choose_name}}： <label style="color:#B30000" class="_span data-v-73b22dd8">{{choose.deploy.deploy_name}}</label></view>
+              </view>
+              <view class="_div data-v-73b22dd8 tab-content clear_float">
+                <view class="_div data-v-73b22dd8 tab-wrapper">
+                  <view class="_div data-v-73b22dd8 tab-series">
+                    <view wx:if="{{choose.choose_room == 1}}" class="_div data-v-73b22dd8">
+                      <view class="_div data-v-73b22dd8"> 系列选择： <label class="_span data-v-73b22dd8 tab-series-series">{{choose.deploy.deploy_name}}</label> <label class="_span data-v-73b22dd8 tab-series-meter">{{choose.deploy.price}}元/米</label></view>
+                      <view wx:key="choose_rooms_index" key="{{choose_rooms_index}}" wx:if="{{choose_rooms}}" wx:for="{{choose.choose_rooms}}" wx:for-index="choose_rooms_index" wx:for-item="choose_rooms" class="_div data-v-73b22dd8">
+                        <view class="_div data-v-73b22dd8 tab-select">
+                          <checkbox-group bindchange="handleProxy" data-eventid="{{'1_'+index_choose+'-'+choose_rooms_index}}" data-comkey="{{$k}}" class="_checkbox-group data-v-73b22dd8"><label class="_label data-v-73b22dd8 checkbox">
+                              <checkbox value="{{index3}}" checked="{{true}}" color="{{color}}" style="padding-bottom: 5px;" class="_checkbox data-v-73b22dd8" />
+                              {{choose_rooms.name}}
+                            </label></checkbox-group>
+                        </view>
+                      </view>
+                    </view>
+                    <view wx:elif="{{choose.deploy.material_id}}" class="_div data-v-73b22dd8">
+                      <view class="_div data-v-73b22dd8"> 系列选择： <label class="_span data-v-73b22dd8 tab-series-series">{{choose.deploy.deploy_name}}</label> <label class="_span data-v-73b22dd8 tab-series-meter">{{choose.deploy.price}}元/米</label></view>
+                      <view class="_div data-v-73b22dd8 tab-series-main"><label class="_span data-v-73b22dd8">材质选择：</label>
+                        <view class="_ul data-v-73b22dd8 tab-serise-ul clear_float">
+                          <view class="_li data-v-73b22dd8 tab-series-li"><label class="_span data-v-73b22dd8">
+                              <image src="{{choose.deploy.id.material_cover}}" style="width:10px;height:10px;vertical-align: middle;margin:0 6px" class="_img data-v-73b22dd8"></image>
+                            </label> <label class="_span data-v-73b22dd8">{{choose.deploy.id.material_name}}</label></view>
+                        </view>
+                      </view>
+                    </view>
+                    <view wx:elif="{{choose.deploy.bathroom_type}}" class="_div data-v-73b22dd8">
+                      <view class="_div data-v-73b22dd8"> 系列选择：{{choose.deploy.bathroom_type}}
+                        <label class="_span data-v-73b22dd8 tab-series-series">{{choose.deploy.deploy_name}}</label> <label class="_span data-v-73b22dd8 tab-series-meter">{{choose.deploy.price}}元/米</label></view>
+                      <view class="_div data-v-73b22dd8 tab-series-main"><label class="_span data-v-73b22dd8">材质选择：</label>
+                        <view class="_ul data-v-73b22dd8 tab-serise-ul clear_float">
+                          <view class="_li data-v-73b22dd8 tab-series-li"><label class="_span data-v-73b22dd8"></label> <label class="_span data-v-73b22dd8">{{choose.deploy.bathroom_types}}</label></view>
+                        </view>
+                      </view>
+                    </view>
+                    <view wx:if="{{choose.choose_name=='选择配件'}}" class="_div data-v-73b22dd8">
+                      <view class="_div data-v-73b22dd8"> 总价： <label class="_span data-v-73b22dd8 tab-series-meter">{{choose.deploy.price}}x{{orderInfo.house_type.cloth_num}}={{((choose.deploy.price*(orderInfo.house_type.cloth_num))*100|toFixed)/100}}元</label>
+                        <view class="_p data-v-73b22dd8 tab-text-description" style="padding-left:0">{{choose.deploy?choose.deploy.description:'-'}}</view>
+                      </view>
+                    </view>
+                    <view wx:if="{{choose.choose_name=='安装公司'}}" class="_div data-v-73b22dd8">
+                      <view class="_div data-v-73b22dd8"> 总价： <label class="_span data-v-73b22dd8 tab-series-meter">{{choose.deploy.price}}x{{orderInfo.house_type.cloth_num}}={{((choose.deploy.price*orderInfo.house_type.cloth_num)*100|toFixed)/100}}元</label>
+                        <view class="_p data-v-73b22dd8 tab-text-description" style="padding-left:0">{{choose.deploy?choose.deploy.description:'-'}}</view>
+                      </view>
+                    </view>
+                  </view>
+                  <view class="_div data-v-73b22dd8 tab-text" wx:if="{{choose.choose_room == 1}}"><label class="_span data-v-73b22dd8 tab-text-tilte">布料总价：{{choose.deploy.price}}x{{choose.choose_rooms_price}}={{((choose.deploy.price*choose.choose_rooms_price)*100|toFixed)/100}}元</label> <label class="_span data-v-73b22dd8 tab-text-details" bindtap="handleProxy" data-eventid="{{'2_'+index_choose}}" data-comkey="{{$k}}">查看详情</label>
+                    <view class="_p data-v-73b22dd8 tab-text-description" style="padding-left:10px">{{choose.deploy?choose.deploy.description:'-'}}</view>
+                  </view>
+                  <view class="_div data-v-73b22dd8 tab-text" wx:elif="{{choose.deploy.material_id}}"><label class="_span data-v-73b22dd8 tab-text-tilte">布料总价：{{choose.deploy.price}}x{{orderInfo.house_type.cloth_num}}={{((choose.deploy.price*orderInfo.house_type.cloth_num)*100|toFixed)/100}}元</label> <label class="_span data-v-73b22dd8 tab-text-details" bindtap="handleProxy" data-eventid="{{'3_'+index_choose}}" data-comkey="{{$k}}">查看详情</label>
+                    <view class="_p data-v-73b22dd8 tab-text-description" style="padding-left:10px">{{choose.deploy?choose.deploy.description:'-'}}</view>
+                  </view>
+                  <view class="_div data-v-73b22dd8 tab-text" wx:elif="{{choose.deploy.bathroom_type}}"><label class="_span data-v-73b22dd8 tab-text-tilte">配件总价：{{choose.deploy.price}}x{{orderInfo.house_type.bathroom_num}}={{((choose.deploy.price*orderInfo.house_type.bathroom_num)*100|toFixed)/100}}元</label> <label class="_span data-v-73b22dd8 tab-text-details" bindtap="handleProxy" data-eventid="{{'4_'+index_choose}}" data-comkey="{{$k}}">查看详情</label></view>
+                  <view class="_div data-v-73b22dd8 tab-text" wx:else><label class="_span data-v-73b22dd8 tab-text-tilte">{{choose.deploy.deploy_name}}</label> <label class="_span data-v-73b22dd8 tab-text-details" bindtap="handleProxy" data-eventid="{{'5_'+index_choose}}" data-comkey="{{$k}}">查看详情</label></view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="_div data-v-73b22dd8 order-info">
+          <view class="_div data-v-73b22dd8 info-wrapper">
+            <view class="_p data-v-73b22dd8">订单信息：</view>
+            <view class="_p data-v-73b22dd8">订单编号：{{orderInfo.order_no}}</view>
+            <view class="_p data-v-73b22dd8">预约时间：{{orderInfo.created}}</view>
+            <view class="_p data-v-73b22dd8">用户：{{userInfo.username}}</view>
+            <view class="_p data-v-73b22dd8">手机：{{userInfo.mobile}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="_div data-v-73b22dd8 curtain-wrapper {{[isIPhoneX ? 'safeArea' : '']}}" wx:if="{{orderInfo.status==0}}" style="border-top:1px solid #f5f5f5">
+      <view class="_div data-v-73b22dd8 order-buttom">
+        <view class="_div data-v-73b22dd8 order-cancel" catchtap="handleProxy" data-eventid="{{'6'}}" data-comkey="{{$k}}">取消订单</view>
+        <view class="_div data-v-73b22dd8 order-pay" bindtap="handleProxy" data-eventid="{{'7'}}" data-comkey="{{$k}}">立即支付</view>
+      </view>
+    </view>
+  </view>
+</template>

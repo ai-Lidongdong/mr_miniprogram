@@ -1,0 +1,11 @@
+@import "../../common/vendor.wxss";
+
+.detail {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.detail-img ._img {
+  display: block;
+  width: 100%;
+}

@@ -1,0 +1,54 @@
+<template name="b46d2b84">
+  <view class="_div data-v-2361790c">
+    <view class="_div data-v-2361790c house {{[isIPhoneX ? 'houseIPhone' : '']}}">
+      <view class="_div data-v-2361790c house-wrapper" wx:key="item.id" key="{{item.id}}" wx:for="{{buildInfo}}" wx:for-index="index" wx:for-item="item">
+        <view class="_div data-v-2361790c content">
+          <view class="_div data-v-2361790c horizontal-cell">{{property_name}}</view>
+          <view class="_div data-v-2361790c horizontal-cell separator">{{item.build_name}}</view>
+        </view>
+        <view class="_div data-v-2361790c house-text">户型选择原则：例：1栋1601户型对应01户型</view>
+        <view class="_div data-v-2361790c">
+          <view class="_ul data-v-2361790c clear_float" wx:if="{{item.house_type}}">
+            <view class="_li data-v-2361790c house-item {{[moneyId == item_child.id ? 'active' : '']}}" bindtap="handleProxy" wx:key="index2" key="{{index2}}" data-eventid="{{'0_'+index+'-'+index2}}" data-comkey="{{$k}}" wx:for="{{item.house_type}}" wx:for-index="index2" wx:for-item="item_child">
+              <view class="_div data-v-2361790c mould">{{item_child.house_name}}</view>
+              <view class="_div data-v-2361790c number">{{item_child.lowest_floor}}{{item_child.highest_floor}}</view>
+            </view>
+          </view>
+          <view class="_ul data-v-2361790c clear_float" wx:if="{{item.house_type==''}}">
+            <view class="_li data-v-2361790c house-item" style="border: 1px solid #b30000;color:#b30000;width: 60%;">
+              <view class="_div data-v-2361790c mould">01户型</view>
+              <view class="_div data-v-2361790c number">入驻中，敬请等待</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view wx:if="{{buildInfo.length==0}}" class="_div data-v-2361790c">
+        <view class="_div data-v-2361790c house-wrapper">
+          <view class="_div data-v-2361790c content">
+            <view class="_div data-v-2361790c horizontal-cell">{{property_name}}</view>
+            <view class="_div data-v-2361790c horizontal-cell separator">此项目正在入驻中</view>
+          </view>
+          <view class="_div data-v-2361790c house-text">户型选择原则：例：1栋1601户型对应01户型</view>
+          <view class="_div data-v-2361790c">
+            <view class="_ul data-v-2361790c clear_float">
+              <view class="_li data-v-2361790c house-item" style="border: 1px solid #b30000;color:#b30000;width: 60%;">
+                <view class="_div data-v-2361790c mould">01户型</view>
+                <view class="_div data-v-2361790c number">入驻中，敬请等待</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="_div data-v-2361790c service-wrapper {{[isIPhoneX ? 'serviceWrapper' : '']}}">
+      <view class="_div data-v-2361790c service {{[isIPhoneX ? 'serviceIPhone' : '']}}">
+        <view class="_div data-v-2361790c service-left"><button open-type="contact" class="_button data-v-2361790c online">
+            <image src="/static/images/kefu_no.png" class="_img data-v-2361790c service-img"></image> <label style="margin:0 5px" class="_span data-v-2361790c">在线客服</label>
+          </button></view>
+        <view class="_div data-v-2361790c service-right" bindtap="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}">
+          <image src="/static/images/pohao_no.png" class="_img data-v-2361790c service-img"></image> <label style="margin:0 5px" class="_span data-v-2361790c">拨打电话</label>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

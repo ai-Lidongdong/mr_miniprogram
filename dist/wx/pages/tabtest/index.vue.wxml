@@ -1,0 +1,16 @@
+<template name="00c1436b">
+  <view class="_div data-v-29eaa48e tab-warp">
+    <scroll-view class="_scroll-view data-v-29eaa48e menu-wrapper" scroll-into-view="{{navId}}" scroll-with-animation="true" scroll-y>
+      <view class="_ul data-v-29eaa48e menu-ul">
+        <view class="_li data-v-29eaa48e menu-item {{index === currentIndex ? 'current' : ''}}" id="{{'nav_'+index}}" wx:key="index" key="{{index}}" bindtap="handleProxy" data-eventid="{{'0_'+index}}" data-comkey="{{$k}}" wx:for="{{goods}}" wx:for-index="index" wx:for-item="item">{{item.name}}</view>
+      </view>
+    </scroll-view>
+    <scroll-view class="_scroll-view data-v-29eaa48e foods-wrapper" scroll-y bindscroll="handleProxy" scroll-into-view="{{contentId}}" scroll-with-animation="true" data-eventid="{{'1'}}" data-comkey="{{$k}}">
+      <view class="_ul data-v-29eaa48e">
+        <view id="{{'con_'+i}}" class="_li data-v-29eaa48e food-list food-list-hook" wx:key="i" key="{{i}}" wx:for="{{goods}}" wx:for-index="i" wx:for-item="item">
+          <view class="_div data-v-29eaa48e list-item" wx:key="list+item" key="{{list+item}}" wx:for="{{item.data}}" wx:for-index="index" wx:for-item="list">{{list}}</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</template>

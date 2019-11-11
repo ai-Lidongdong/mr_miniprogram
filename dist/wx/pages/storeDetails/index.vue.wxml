@@ -1,0 +1,5 @@
+<import src="/modules/mpvue-wxparse/src/wxParse.vue.wxml" /><template name="e1ea439a">
+  <view class="_div data-v-112db4a5 detail">
+    <view class="_div data-v-112db4a5 detail-img"><template data="{{...$root[$kk+'0'], $root}}" is="61987658"></template></view>
+  </view>
+</template>

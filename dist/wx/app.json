@@ -1,0 +1,80 @@
+{
+    "pages": [
+        "pages/index/main",
+        "pages/authorize/main",
+
+        "pages/order/main",
+        "pages/tabtest/main",
+        "pages/tabtest2/main",
+        "pages/user/main",
+        "pages/houseType/main",
+        "pages/optionType/main",
+        "pages/classifyType/main",
+        "pages/fabricType/main",
+        "pages/reservation/main",
+        "pages/reservaSuccess/main",
+        "pages/storeDetails/main",
+        "pages/map/main",
+        "pages/orderDetails/main",
+        "pages/seeDetails/main",
+        "pages/optionDetails/main",
+        "pages/advertisingDetails/main"
+                 
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "WeChat",
+        "navigationBarTextStyle": "black"
+    },
+    "permission": {
+        "scope.userLocation": {
+            "desc": "请点击确定"
+        }
+    },
+    "tabBar": {
+        "color": "#999999",
+        "backgroundColor": "#fff",
+        "selectedColor": "#B30000",
+        "borderStyle": "white",
+
+        "list": [{
+                "text": "方案",
+                "pagePath": "pages/index/main",
+                "iconPath": "static/tabs/fangan_no.png",
+                "selectedIconPath": "static/tabs/fangan.png"
+            }, {
+                "text": "订单",
+                "pagePath": "pages/order/main",
+                "iconPath": "static/tabs/dingdan_no.png",
+                "selectedIconPath": "static/tabs/dingdan.png"
+            },
+            {
+                "text": "体验店",
+                "pagePath": "pages/user/main",
+                "iconPath": "static/tabs/dianpu_no.png",
+                "selectedIconPath": "static/tabs/dianpu.png"
+            }
+        ],
+
+        "items": [{
+                "name": "方案",
+                "pagePath": "pages/index/main",
+                "icon": "static/tabs/fangan_no.png",
+                "activeIcon": "static/tabs/fangan.png"
+            }, {
+                "name": "订单",
+                "pagePath": "pages/order/main",
+                "icon": "static/tabs/dingdan_no.png",
+                "activeIcon": "static/tabs/dingdan.png"
+            },
+            {
+                "text": "体验店",
+                "pagePath": "pages/user/main",
+                "iconPath": "static/tabs/dianpu_no.png",
+                "selectedIconPath": "static/tabs/dianpu.png"
+            }
+        ],
+        "position": "bottom"
+    }
+}

@@ -1,0 +1,62 @@
+<template name="3520a5a1">
+  <view class="_div data-v-6a8a7093">
+    <view class="_div data-v-6a8a7093 option-main {{[isIPhoneX ? 'optionArea' : '']}}">
+      <view class="_div data-v-6a8a7093 option">
+        <view class="_ul data-v-6a8a7093 clear_float">
+          <view class="_li data-v-6a8a7093">
+            <sapn class="_sapn data-v-6a8a7093 round">●</sapn> 您的户型共有{{room_num}}处窗户需要窗帘 {{abb}}
+          </view>
+          <view class="_li data-v-6a8a7093">
+            <sapn class="_sapn data-v-6a8a7093 round">●</sapn> 窗宽共{{cloth_num}}米（+-0.5）
+          </view>
+          <view class="_li data-v-6a8a7093">
+            <sapn class="_sapn data-v-6a8a7093 round">●</sapn> 点击下面菜单切换窗帘方案
+          </view>
+        </view>
+      </view>
+      <view class="_div data-v-6a8a7093 program-bg" wx:key="index" key="{{index}}" index="{{father_index}}" wx:for="{{program}}" wx:for-index="index" wx:for-item="item">
+        <view class="_div data-v-6a8a7093 program-main">
+          <view class="_div data-v-6a8a7093 program">
+            <view class="_p data-v-6a8a7093 program-title">
+              {{item.room_name}}
+              <label style="font-size:12px; font-weight: normal;" class="_span data-v-6a8a7093">{{item.width_meter}} M</label></view>
+          </view>
+          <view class="_div data-v-6a8a7093 tab-content clear_float">
+            <view class="_div data-v-6a8a7093 tab-wrapper">
+              <view class="_div data-v-6a8a7093 tab-img" wx:if="{{item.info}}">
+                <image src="{{item.info.cover}}" bindtap="handleProxy" data-eventid="{{'0_'+index}}" data-comkey="{{$k}}" class="_img data-v-6a8a7093"></image>
+              </view>
+              <view class="_div data-v-6a8a7093 tab-multiple"><label style="margin: 5px 5px 0px 5px;display: block;" class="_span data-v-6a8a7093">颜色选择：</label>
+                <view class="_ul data-v-6a8a7093 tab-serise-ul clear_float">
+                  <view class="_li data-v-6a8a7093 tab-series-li {{[item.check_color_id == color.id ? 'tab_active' : '']}}" style="padding: 7px 15px;" wx:key="color_index" key="{{color_index}}" bindtap="handleProxy" data-eventid="{{'1_'+index+'-'+color_index}}" data-comkey="{{$k}}" wx:for="{{item.color_list}}" wx:for-index="color_index" wx:for-item="color"><label class="_span data-v-6a8a7093">{{color.name}}</label></view>
+                </view>
+              </view>
+              <view class="_div data-v-6a8a7093 tab-multiple"><label style="margin: 5px 5px 0px 5px;display: block;" class="_span data-v-6a8a7093">材质选择：</label>
+                <view class="_ul data-v-6a8a7093 tab-serise-ul clear_float">
+                  <view class="_li data-v-6a8a7093 tab-series-li {{[item.check_material_id == material.id ? 'tab_active' : '']}}" wx:key="material_index" key="{{material_index}}" bindtap="handleProxy" data-eventid="{{'2_'+index+'-'+material_index}}" data-comkey="{{$k}}" wx:for="{{item.material}}" wx:for-index="material_index" wx:for-item="material"><label class="_span data-v-6a8a7093">
+                      <image src="{{material.material_cover}}" style="width:10px;height:10px;vertical-align: middle;" class="_img data-v-6a8a7093"></image>
+                    </label> <label style="margin:0 5px" class="_span data-v-6a8a7093">{{material.material_name}}</label></view>
+                </view>
+              </view>
+              <view class="_div data-v-6a8a7093 tab-text">
+                <view class="_p data-v-6a8a7093 tab-text-tilte" wx:if="{{item.info}}">全国统一价：{{item.info.offer_price}}*{{item.width_meter}}={{item.info.offer_price * item.width_meter}}元</view>
+                <view class="_p data-v-6a8a7093 tab-text-caption">备注：{{item.description}}</view> <label class="_span data-v-6a8a7093 tab-text-details" bindtap="handleProxy" data-eventid="{{'3_'+index}}" data-comkey="{{$k}}">社区优惠价：{{item.width_meter}}元</label>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="_div data-v-6a8a7093 curtain-wrapper {{[isIPhoneX ? 'safeArea' : '']}}" style="border-top:1px solid #f5f5f5">
+      <view class="_div data-v-6a8a7093 curtain-buttom" bindtap="handleProxy" data-eventid="{{'4'}}" data-comkey="{{$k}}">下一步</view>
+      <view class="_div data-v-6a8a7093 service {{[isIPhoneX ? 'serviceIPhone' : '']}}">
+        <view class="_div data-v-6a8a7093 service-left"><button open-type="contact" class="_button data-v-6a8a7093 online">
+            <image src="/static/images/kefu_no.png" class="_img data-v-6a8a7093 service-img"></image> <label style="margin:0 5px" class="_span data-v-6a8a7093">在线客服</label>
+          </button></view>
+        <view class="_div data-v-6a8a7093 service-right" bindtap="handleProxy" data-eventid="{{'5'}}" data-comkey="{{$k}}">
+          <image src="/static/images/pohao_no.png" class="_img data-v-6a8a7093 service-img"></image> <label style="margin:0 5px" class="_span data-v-6a8a7093">拨打电话</label>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

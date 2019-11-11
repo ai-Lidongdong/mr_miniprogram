@@ -1,0 +1,12 @@
+<template name="02250e26">
+  <view class="_div data-v-7c8587bb search-body">
+    <view class="_div data-v-7c8587bb dialog-container" wx:if="{{show}}">
+      <view class="_div data-v-7c8587bb dialog-mask"></view>
+      <view class="_div data-v-7c8587bb dialog-info">
+        <view class="_div data-v-7c8587bb dialog-title">登陆提示</view>
+        <view class="_div data-v-7c8587bb dialog-content">为了您能有更好的体验，请点击授权😊</view>
+        <view class="_div data-v-7c8587bb dialog-footer"><button bindgetuserinfo="handleProxy" open-type="getUserInfo" class="_button data-v-7c8587bb dialog-btn" data-eventid="{{'0'}}" data-comkey="{{$k}}">点击授权</button></view>
+      </view>
+    </view>
+  </view>
+</template>

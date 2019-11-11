@@ -1,0 +1,51 @@
+<template name="5d6c6260">
+  <view class="_div data-v-4919621e reservation">
+    <view class="_div data-v-4919621e submit-input" id="wrap" ref="mybox">
+      <view class="_div data-v-4919621e">项目：<label class="_span data-v-4919621e submit-title">{{property_name}}</label></view>
+      <view class="_div data-v-4919621e box">
+        <view class="_div data-v-4919621e box-number">房号：</view>
+        <view class="_div data-v-4919621e box-item" style="width:30%"><input type="text" class="_input data-v-4919621e room-input" value="{{build_num}}" bindinput="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" /> <label class="_span data-v-4919621e">栋</label></view>
+        <view class="_div data-v-4919621e box-item" style="width:35%"><input type="text" class="_input data-v-4919621e room-input" value="{{unit_num}}" bindinput="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}" /> <label class="_span data-v-4919621e">单元</label></view>
+        <view class="_div data-v-4919621e box-item" style="width:30%"><input type="text" class="_input data-v-4919621e room-input" value="{{room_num}}" bindinput="handleProxy" data-eventid="{{'2'}}" data-comkey="{{$k}}" /> <label class="_span data-v-4919621e">号</label></view>
+      </view>
+      <view class="_div data-v-4919621e box-user">姓名： <input type="text" class="_input data-v-4919621e box-user-input" value="{{username}}" bindinput="handleProxy" data-eventid="{{'3'}}" data-comkey="{{$k}}" /></view>
+      <view class="_div data-v-4919621e box-user">手机： <input type="text" class="_input data-v-4919621e box-user-input" value="{{mobile}}" bindinput="handleProxy" data-eventid="{{'4'}}" data-comkey="{{$k}}" /></view>
+    </view>
+    <view style="background: #fff;padding: 5px 0;margin: 10px 0;" class="_div data-v-4919621e">
+      <radio-group class="_radio-group data-v-4919621e radio-group" bindchange="handleProxy" data-eventid="{{'5'}}" data-comkey="{{$k}}">
+        <view class="_div data-v-4919621e order-wrapper">
+          <view class="_div data-v-4919621e order-left">
+            <view class="_div data-v-4919621e order-address"><label class="_span data-v-4919621e order-name">预约量房：</label> <label class="_span data-v-4919621e order-number">{{feeNumber}}元</label></view>
+          </view>
+          <view class="_p data-v-4919621e order-text">(量房费用下单后在总价里扣除，如果不下单，费用作为量房师傅工钱)</view>
+        </view>
+        <view class="_div data-v-4919621e order-wrapper">
+          <view class="_div data-v-4919621e order-left">
+            <view class="_div data-v-4919621e order-address"><label class="_span data-v-4919621e order-name">预算总价：</label> <label class="_span data-v-4919621e order-number">{{total}}元</label></view>
+          </view>
+        </view>
+        <view class="_div data-v-4919621e page__bd">
+          <radio class="_radio data-v-4919621e radio" wx:key="item" key="{{item}}" value="{{item.value}}" color="{{color}}" wx:for="{{items}}" wx:for-index="index" wx:for-item="item" />
+        </view>
+      </radio-group>
+    </view>
+    <view class="_div data-v-4919621e adver-wrapper">
+      <view class="_div data-v-4919621e advertising" bindtap="handleProxy" data-eventid="{{'6'}}" data-comkey="{{$k}}">
+        <image src="{{advertising}}" class="_img data-v-4919621e"></image>
+      </view>
+    </view>
+    <view class="_div data-v-4919621e service {{[isIPhoneX ? 'serviceArea' : '']}}">
+      <view class="_div data-v-4919621e service-left"><button open-type="contact" class="_button data-v-4919621e online">
+          <image src="/static/images/kefu_no.png" class="_img data-v-4919621e service-img"></image> <label style="margin:0 5px" class="_span data-v-4919621e">在线客服</label>
+        </button></view>
+      <view class="_div data-v-4919621e service-right" bindtap="handleProxy" data-eventid="{{'7'}}" data-comkey="{{$k}}">
+        <image src="/static/images/pohao_no.png" class="_img data-v-4919621e service-img"></image> <label style="margin:0 5px" class="_span data-v-4919621e">拨打电话</label>
+      </view>
+    </view>
+    <view class="_div data-v-4919621e curtain-wrapper {{[isIPhoneX ? 'safeArea' : '']}}" style="border-top:1px solid #f5f5f5">
+      <view class="_div data-v-4919621e curtain-buttom">
+        <view bindtap="handleProxy" data-eventid="{{'8'}}" data-comkey="{{$k}}" class="_div data-v-4919621e">提交</view>
+      </view>
+    </view>
+  </view>
+</template>

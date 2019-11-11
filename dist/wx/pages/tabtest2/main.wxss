@@ -1,0 +1,53 @@
+@import "../../common/vendor.wxss";
+
+.menu-wrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 30%;
+  height: 100%;
+  text-align: center;
+  border-top: solid 2rpx #ddd;
+}
+.menu-ul ._li {
+  line-height: 160rpx;
+  border: solid 2rpx #ddd;
+  border-top: 0;
+}
+.foods-wrapper {
+  position: absolute;
+  right: 0;
+  top: 80rpx;
+  width: 70%;
+  height: 100%;
+  border-left: solid 2rpx #ddd;
+}
+.list-item {
+  height: 200rpx;
+  text-align: center;
+  line-height: 200rpx;
+  border-bottom: solid 2rpx #ddd;
+}
+.current {
+  color: #f00;
+}
+.top-wrapper {
+  position: fixed;
+  height: 80rpx;
+  top: 0;
+  right: 0;
+  width: 70%;
+  background: #555;
+  z-index: 999999;
+}
+.top-ul {
+  display: flex;
+}
+.top-ul ._li {
+  border: solid 2rpx #ddd;
+  color: #fff;
+  margin-top: 10rpx;
+}
+.current2 {
+  color: #f00!important;
+}

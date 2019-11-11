@@ -1,0 +1,55 @@
+<template name="3d5af45e">
+  <view class="_div data-v-16bc50c3">
+    <view class="_div data-v-16bc50c3 option-main {{[isIPhoneX ? 'optionArea' : '']}}">
+      <view class="_div data-v-16bc50c3 option"><label style="font-weight:600" class="_span data-v-16bc50c3">所需窗帘窗宽{{cloth_num}}米同时所需配件{{cloth_num}}米</label></view>
+      <view class="_div data-v-16bc50c3 program-bg" wx:key="index" key="{{index}}" wx:for="{{fabri.choose}}" wx:for-index="index" wx:for-item="item">
+        <view class="_div data-v-16bc50c3 program-main">
+          <view class="_div data-v-16bc50c3 program">
+            <view class="_p data-v-16bc50c3 program-title">{{item.choose_name}}</view>
+          </view>
+          <view class="_ul data-v-16bc50c3 tab-tilte clear_float">
+            <view wx:key="Lmid" key="{{Lmid}}" bindtap="handleProxy" data-eventid="{{'0_'+index+'-'+Lmid}}" data-comkey="{{$k}}" wx:for="{{item.deploy}}" wx:for-index="Lmid" wx:for-item="ind" class="_li data-v-16bc50c3 {{[ind.id == fabriInit[item.id][0] ? 'active' : '']}}">
+              {{ind.deploy_name}}
+            </view>
+          </view>
+          <view class="_div data-v-16bc50c3 tab-content clear_float" wx:if="{{indexs == index2}}" wx:key="w" key="{{w}}" wx:for="{{item.deploy}}" wx:for-index="index2" wx:for-item="w">
+            <view class="_div data-v-16bc50c3 tab-wrapper" wx:if="{{namePrice[item.id] && namePrice[item.id].price != 0}}">
+              <view class="_div data-v-16bc50c3 tab-series">
+                <view wx:if="{{index == 0}}" class="_div data-v-16bc50c3"><label class="_span data-v-16bc50c3">配件总价：</label> <label class="_span data-v-16bc50c3 tab-series-meter">
+                    {{namePrice[item.id].price}} * {{cloth_num}}= {{((namePrice[item.id].price*cloth_num)*100|toFixed)/100}} 元 </label></view>
+                <view class="_div data-v-16bc50c3 tab-select" wx:elif="{{item.choose_room == 1}}">
+                  <view style="margin-bottom: 16px;" class="_div data-v-16bc50c3"><label class="_span data-v-16bc50c3">系列选择：</label> <label class="_span data-v-16bc50c3 tab-series-series">{{namePrice[item.id].deploy_name}}</label> <label class="_span data-v-16bc50c3 tab-series-meter">{{namePrice[item.id].price}}元</label></view>
+                  <checkbox-group bindchange="handleProxy" data-eventid="{{'1_'+index+'-'+index2}}" data-comkey="{{$k}}" class="_checkbox-group data-v-16bc50c3"><label class="_label data-v-16bc50c3 checkbox" wx:key="index3" key="{{index3}}" wx:for="{{fabri.room_type}}" wx:for-index="index3" wx:for-item="room">
+                      <checkbox value="{{index3}}" checked="{{false}}" color="{{color}}" style="padding-bottom: 5px;" class="_checkbox data-v-16bc50c3" />
+                      {{room.room_name}}
+                    </label></checkbox-group>
+                </view>
+                <view wx:else class="_div data-v-16bc50c3"><label class="_span data-v-16bc50c3">总价：</label> <label class="_span data-v-16bc50c3 tab-series-meter">{{namePrice[item.id].price}}*{{cloth_num}}={{((namePrice[item.id].price*cloth_num)*100|toFixed)/100}}元</label></view>
+              </view>
+              <view class="_div data-v-16bc50c3 tab-text" wx:if="{{item.choose_name == '选择配件'&&item.choose_room == 1}}"><label class="_span data-v-16bc50c3 tab-text-tilte">{{namePrice[item.id].deploy_name}}</label> <label class="_span data-v-16bc50c3 tab-text-details" bindtap="handleProxy" data-eventid="{{'2_'+index+'-'+index2}}" data-comkey="{{$k}}">查看详情</label>
+                <view class="_p data-v-16bc50c3 tab-text-description" style="padding-left:10px">{{namePrice[item.id].description}}</view>
+              </view>
+              <view class="_div data-v-16bc50c3 tab-text" wx:elif="{{item.choose_room == 2}}"><label class="_span data-v-16bc50c3"><label class="_span data-v-16bc50c3 tab-text-tilte" wx:if="{{index == 0}}">{{namePrice[item.id].deploy_name}}</label><label class="_span data-v-16bc50c3 tab-text-tilte" wx:else>专业窗帘安装</label> <label class="_span data-v-16bc50c3 tab-text-details" bindtap="handleProxy" data-eventid="{{'3_'+index+'-'+index2}}" data-comkey="{{$k}}">查看详情</label>
+                  <view class="_p data-v-16bc50c3 tab-text-description" style="padding-left:10px">{{namePrice[item.id].description}}</view>
+                </label></view>
+              <view class="_div data-v-16bc50c3 tab-text" wx:else><label class="_span data-v-16bc50c3 tab-text-tilte"> 布料总价：{{namePrice[item.id].price}} x {{RoomPrice[item.id]?RoomPrice[item.id]:0}} = {{((namePrice[item.id].price*(RoomPrice[item.id]?RoomPrice[item.id]:0))*100|toFixed)/100}}元 </label> <label class="_span data-v-16bc50c3 tab-text-details" bindtap="handleProxy" data-eventid="{{'4_'+index+'-'+index2}}" data-comkey="{{$k}}">查看详情</label>
+                <view class="_p data-v-16bc50c3 tab-text-description" style="padding-left:10px">{{namePrice[item.id].description}}</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="_div data-v-16bc50c3 curtain-wrapper {{[isIPhoneX ? 'safeArea' : '']}}" style="border-top:1px solid #f5f5f5">
+      <view class="_div data-v-16bc50c3 curtain-buttom" bindtap="handleProxy" data-eventid="{{'5'}}" data-comkey="{{$k}}">下一步</view>
+      <view class="_div data-v-16bc50c3 service {{[isIPhoneX ? 'serviceIPhone' : '']}}">
+        <view class="_div data-v-16bc50c3 service-left"><button open-type="contact" class="_button data-v-16bc50c3 online">
+            <image src="/static/images/kefu_no.png" class="_img data-v-16bc50c3 service-img"></image> <label style="margin:0 5px" class="_span data-v-16bc50c3">在线客服</label>
+          </button></view>
+        <view class="_div data-v-16bc50c3 service-right" bindtap="handleProxy" data-eventid="{{'6'}}" data-comkey="{{$k}}">
+          <image src="/static/images/pohao_no.png" class="_img data-v-16bc50c3 service-img"></image> <label style="margin:0 5px" class="_span data-v-16bc50c3">拨打电话</label>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>
