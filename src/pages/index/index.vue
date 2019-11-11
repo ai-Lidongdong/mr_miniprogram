@@ -95,7 +95,6 @@ export default {
     };
   },
   onShow() {
-    console.log('2.9', 2.9.toFixed())
     this.selectArea = true;
     this.category = true;
   },
@@ -104,11 +103,15 @@ export default {
     console.log(this.token + "indexToken");
     this.getFloorInfo();
     this.getContact();
+    this.hanldFanc();
   },
   onUnload() {
     Object.assign(this.$data, this.$options.data());
   },
   methods: {
+    hanldFanc() {
+      console.log("-----到此一游")
+    },
     //品类跳转显示页面
     hanldCategory() {
       this.selectArea = true;
